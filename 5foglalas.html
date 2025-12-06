@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalás - DeepBreath Stúdió</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">DeepBreath</div>
+        <ul class="nav-links">
+            <li><a href="1deepbreath.html">Főoldal</a></li>
+            <li><a href="2orak.html">Órák</a></li>
+            <li><a href="3orarend.html">Órarend</a></li>
+            <li><a href="4arak.html">Árak</a></li>
+            <li><a href="5foglalas.html">Foglalás</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="content">
+    <h2>Foglalás</h2>
+    <p>Vedd fel velünk a kapcsolatot, vagy jelentkezz egy ingyenes próbaórára az alábbi űrlapon!</p>
+
+    <div class="elerhetosegeink">
+        <h3>Elérhetőségeink</h3>
+        <p>Keress minket bizalommal!</p>
+        <p><strong>Cím:</strong> Béke utca 12., 1111 Budapest</p>
+        <p><strong>Telefon:</strong> +36 30 123 4444</p>
+        <p><strong>E-mail:</strong> info@deepbreathstudio.hu</p>
+        <p><strong>Nyitvatartás:</strong> Hétfő - Szombat: 10:00 - 20:00</p>
+    </div>
+
+    <form id="foglalas">
+        <h2>Jelentkezés órára</h2>
+
+        <div class="form-group">
+            <label for="fullname">Teljes név:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Pl. Vezetéknév Keresztnév">
+            <div id="error-name" class="error-msg"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail cím:</label>
+            <input type="email" id="email" name="email" placeholder="pelda@gmail.com">
+            <div id="error-email" class="error-msg"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="telefonszam">Telefonszám:</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="06301234567">
+            <div id="error-telszam" class="error-msg"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="tipus">Óratípus:</label>
+            <select id="tipus" name="tipus">
+                <option value="">Válassz...</option>
+                <option value="kezdojoga">Kezdő jóga</option>
+                <option value="pilates">Pilates</option>
+                <option value="gerincjoga">Gerincjóga</option>
+            </select>
+            <div id="error-type" class="error-msg"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="szint"> Jártasság szintje (1-5):</label>
+            <input type="range" id="szint" min="1" max="5" value="1" name="szint">
+        </div>
+
+        <div class="form-group" style="flex: 1;">
+            <label for="datum">Dátum:</label>
+            <input type="date" id="datum" name="datum">
+            <div id="error-date" class="error-msg"></div>
+        </div>
+
+        <div class="form-group radio-group">
+            <label style="display:block; margin-bottom:10px;">Igénybe veszed a joga matrac kölcsönzést? Pilates esetén válaszd a "Nem" opciót.</label>
+            <input type="radio" id="igen" name="matrac" value="igen" checked>
+            <label for="igen">Igen</label>
+            
+            <input type="radio" id="nem" name="matrac" value="nem">
+            <label for="nem">Nem</label>
+
+            <input type="radio" id="other" name="matrac" value="egyeb">
+            <label for="other">Sajátot hozok</label>
+        </div>
+
+        <div class="form-group">
+            <label for="megjegyzes">Egyéb megjegyzés:</label>
+            <textarea id="megjegyzes" name="megjegyzes" rows="2" placeholder="Megjegyzés..."></textarea>
+        </div>
+
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="terms" name="terms_accepted">
+            <label for="terms">Elfogadom az Adatvédelmi Nyilatkozatot *</label>
+            <div id="error-terms" class="error-msg"></div>
+        </div>
+
+        <button class="btn" type="submit">Jelentkezés küldése</button>
+        
+    </form>
+</section>
+
+<script src="deepbreath.js"></script>
+
+<footer>
+    <p>© 2025 DeepBreath Stúdió</p>
+</footer>
+</body>
+</html>
